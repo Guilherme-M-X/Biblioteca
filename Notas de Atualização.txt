@@ -1,0 +1,4 @@
+Atualização 1.0
+	- Criação do arquivo "livros.txt"
+	- Criação da biblioteca "cadastro.h"
+	- Criação do menu principal
