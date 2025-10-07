@@ -60,19 +60,11 @@ int main () {
 				
 			case '3' : 
 				printf("\033[H\033[2J");
-				printf("\nEm Desenvolvimento"); // Cadastro de Livro]
-				printf("\nAqui você poderá cadastrar livros");
-				printf("\nAperte 'x' para sair");
-				printf("\n");
-				 
-				verifica_saida = getch();
+				cadastro();
+				printf("\033[H\033[2J");
 				
-				if (verifica_saida == 'x'){
-					
-					printf("\033[H\033[2J");
-					break;	
-				}	
-			
+				break;	
+				
 			case (char)27 : //Saida do programa
 				verific_inicial = 0;
 				break;

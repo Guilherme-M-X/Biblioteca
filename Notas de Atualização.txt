@@ -2,3 +2,7 @@ Atualização 1.0
 	- Criação do arquivo "livros.txt"
 	- Criação da biblioteca "cadastro.h"
 	- Criação do menu principal
+
+Atualização 1.1
+	- Criação da função "cadastro()" para armazenar dados no arquivo "livros.txt"
+	{ainda apresenta falhas no salvamento das informações, precisa ser arrumado}
