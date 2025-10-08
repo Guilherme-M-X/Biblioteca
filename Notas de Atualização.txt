@@ -6,3 +6,8 @@ Atualização 1.0
 Atualização 1.1
 	- Criação da função "cadastro()" para armazenar dados no arquivo "livros.txt"
 	{ainda apresenta falhas no salvamento das informações, precisa ser arrumado}
+Atualização 1.2
+	-Aprimoramento no cadastro de livros na área de Gênero
+	(anteriormente precisava-se digitar o gênero assim abrindo margem para erro, porem agora existem apenas 9 opções de entrada
+assim limitando os gêneros a serem selecionados, talvez adicionar uma ferramenta para adicionar novos gêneros futuramente)
+	{erros no salvamento do arquivo ainda n]ao foram resolvidos}

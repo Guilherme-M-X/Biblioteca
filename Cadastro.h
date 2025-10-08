@@ -12,6 +12,12 @@ struct cadastro{
 	int id;
 };
 
+/*Declaração de Variaveis*/
+int verifica_genero;
+char entra;
+/*Fianl de declaração das vbariaveis*/
+
+
 /*Menu principal*/
 void menu_principal(){
 
@@ -26,6 +32,35 @@ void menu_principal(){
     printf("\n  [ESC] - SAIR                    ");
     printf("\n\n");
 }
+
+
+/*Menu Genro*/
+void menu_genero(){
+
+    printf("\n           ########## ESCOLHA O GENERO ##########           ");
+    printf("\n");
+    printf("\n  [1] - Ficcção                ");
+    printf("\n");
+    printf("\n  [2] - Terror                ");
+    printf("\n");
+    printf("\n  [3] - Romance           ");
+    printf("\n");
+    printf("\n  [4] - Infantil                 ");
+    printf("\n");
+    printf("\n  [5] - Culinaria                ");
+    printf("\n");
+    printf("\n  [6] - Religioso               ");
+    printf("\n");
+    printf("\n  [7] - Exatas               ");
+    printf("\n");
+    printf("\n  [8] - Ciências e Humanidade    ");
+    printf("\n");
+    printf("\n  [9] - Outros                ");
+    printf("\n");
+    printf("\n  [ESC] - Cancelar                ");
+    printf("\n\n");
+}
+
 
 /*Cadastro de livros*/
 
@@ -55,10 +90,93 @@ void cadastro(){
 	    fgets(cad.titulo, 60, stdin);
 	    cad.titulo[strcspn(cad.titulo, "\n")] = 0; //retira o \n do final 
 	    
-	    printf ("Digite o genero do livro: ");
-	   fflush(stdin);
-	   fgets(cad.genero, 60, stdin);
-	   cad.genero[strcspn(cad.genero, "\n")] = 0;
+	    /*printf ("Escolha o genero do livro: ");
+		   fflush(stdin);
+		   fgets(cad.genero, 60, stdin);
+		   cad.genero[strcspn(cad.genero, "\n")] = 0;*/
+		   
+		menu_genero();    
+		verifica_genero = 1;
+		   
+		do{
+			
+			entra = getch();
+			
+			switch(entra){				
+				case '1':
+					
+					strcpy(cad.genero, "Ficção");
+					verifica_genero = 0;
+					break;
+							
+				case '2':
+					
+					strcpy(cad.genero, "Terror");
+					verifica_genero = 0;
+					break;		
+				
+				
+				case '3':
+					
+					strcpy(cad.genero, "Romance");
+					verifica_genero = 0;
+					break;
+				
+				
+				case '4':
+					
+					strcpy(cad.genero, "Infantil");
+					verifica_genero = 0;
+					break;
+			
+				
+				case '5':
+					
+					strcpy(cad.genero, "Culinaria");
+					verifica_genero = 0;
+					break;			
+
+				
+				case '6':
+					
+					strcpy(cad.genero, "Religioso");
+					verifica_genero = 0;
+					break;			
+				
+				case '7':
+					
+					strcpy(cad.genero, "Exatas");
+					verifica_genero = 0;
+					break;			
+				
+				case '8':
+					
+					strcpy(cad.genero, "Ciências e Humanidade");
+					verifica_genero = 0;
+					break;			
+				
+				case '9':
+					
+					strcpy(cad.genero, "Outros");
+					verifica_genero = 0;
+					break;			
+				
+				case (char)27:
+					
+					verifica_genero = 0;
+					break;
+					
+				default :
+				
+				printf ("\n		Opção invalida				");
+				printf ("\n	Esolha outra opção para continuar	");	
+				printf ("\n\n")	;
+								
+			}
+			
+			
+			
+		}while (verifica_genero != 0);
 	   
 	   cad.id = numeroAleatorio;
 
