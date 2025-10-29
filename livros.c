@@ -22,9 +22,9 @@ void cadastrar_livro(Sistema *s) {
     novo.id = s->total_livros + 1;
 
     printf("\n");
-    printf(" ╔═══════════════════════════════════════════════╗\n");
-    printf(" ║         CADASTRO DE NOVO LIVRO                ║\n");
-    printf(" ╚═══════════════════════════════════════════════╝\n");
+    printf(" -------------------------------------------------\n");
+    printf(" -         CADASTRO DE NOVO LIVRO                -\n");
+    printf(" -------------------------------------------------\n");
     printf("\n Titulo: ");
     getchar();
     fgets(novo.titulo, MAX_TITULO, stdin);
@@ -61,9 +61,9 @@ void cadastrar_livro(Sistema *s) {
 
 void listar_livros(Sistema *s) {
     printf("\n");
-    printf(" ╔═══════════════════════════════════════════════════════════════════╗\n");
-    printf(" ║                    CATALOGO DE LIVROS                             ║\n");
-    printf(" ╚═══════════════════════════════════════════════════════════════════╝\n");
+    printf(" -------------------------------------------------\n");
+    printf(" -                    CATALOGO DE LIVROS         -\n");
+    printf(" -------------------------------------------------\n");
     printf("\n");
 
     if (s->total_livros == 0) {
@@ -72,19 +72,19 @@ void listar_livros(Sistema *s) {
     }
 
     for (int i = 0; i < s->total_livros; i++) {
-        printf(" ┌─────────────────────────────────────────────────────────────┐\n");
-        printf(" │ ID: %-3d                                                     │\n", 
+        printf(" -------------------------------------------------\n");
+        printf(" - ID: %-3d                                                     -\n", 
                s->livros[i].id);
-        printf(" │ Titulo: %-51.51s │\n", s->livros[i].titulo);
-        printf(" │ Autor: %-52.52s │\n", s->livros[i].autor);
-        printf(" │ Editora: %-50.50s │\n", s->livros[i].editora);
-        printf(" │ Ano: %-4d  │  ISBN: %-20s              │\n", 
+        printf(" - Titulo: %-51.51s -\n", s->livros[i].titulo);
+        printf(" - Autor: %-52.52s -\n", s->livros[i].autor);
+        printf(" - Editora: %-50.50s -\n", s->livros[i].editora);
+        printf(" - Ano: %-4d  -  ISBN: %-20s              -\n", 
                s->livros[i].ano, s->livros[i].isbn);
-        printf(" │ Exemplares: %d / %d  │  Status: %-20s     │\n",
+        printf(" - Exemplares: %d / %d  -  Status: %-20s     -\n",
                s->livros[i].exemplares_disponiveis,
                s->livros[i].exemplares_totais,
                status_livro_string(s->livros[i].status));
-        printf(" └─────────────────────────────────────────────────────────────┘\n");
+        printf(" -------------------------------------------------\n");
         printf("\n");
     }
 
@@ -107,14 +107,14 @@ void buscar_livro(Sistema *s) {
             strstr(s->livros[i].autor, termo) != NULL ||
             strstr(s->livros[i].isbn, termo) != NULL) {
 
-            printf(" ┌─────────────────────────────────────────────────────────────┐\n");
-            printf(" │ ID: %-3d                                                     │\n", 
+            printf(" -------------------------------------------------\n");
+            printf(" - ID: %-3d                                                     -\n", 
                    s->livros[i].id);
-            printf(" │ Titulo: %-51.51s │\n", s->livros[i].titulo);
-            printf(" │ Autor: %-52.52s │\n", s->livros[i].autor);
-            printf(" │ Disponivel: %d exemplares                                   │\n",
+            printf(" - Titulo: %-51.51s -\n", s->livros[i].titulo);
+            printf(" - Autor: %-52.52s -\n", s->livros[i].autor);
+            printf(" - Disponivel: %d exemplares                                   -\n",
                    s->livros[i].exemplares_disponiveis);
-            printf(" └─────────────────────────────────────────────────────────────┘\n");
+            printf(" -------------------------------------------------\n");
             printf("\n");
             encontrados++;
         }
@@ -179,9 +179,9 @@ void menu_livros(Sistema *s, Usuario *usuario_logado) {
 
     do {
         printf("\n");
-        printf(" ╔═══════════════════════════════════════════════╗\n");
-        printf(" ║           GESTAO DE LIVROS                    ║\n");
-        printf(" ╚═══════════════════════════════════════════════╝\n");
+        printf(" -------------------------------------------------\n");
+        printf(" -           GESTAO DE LIVROS                    -\n");
+        printf(" -------------------------------------------------\n");
         printf("\n");
         printf(" 1. Listar todos os livros\n");
         printf(" 2. Buscar livro\n");

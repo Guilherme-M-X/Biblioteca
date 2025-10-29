@@ -35,9 +35,9 @@ void realizar_emprestimo(Sistema *s, Usuario *usuario_logado) {
     int id_livro;
 
     printf("\n");
-    printf(" ╔═══════════════════════════════════════════════╗\n");
-    printf(" ║         REALIZAR EMPRESTIMO                   ║\n");
-    printf(" ╚═══════════════════════════════════════════════╝\n");
+    printf(" -------------------------------------------------\n");
+    printf(" -         REALIZAR EMPRESTIMO                   -\n");
+    printf(" -------------------------------------------------\n");
     printf("\n");
 
     // Verificar limite de empréstimos
@@ -105,9 +105,9 @@ void devolver_livro(Sistema *s, Usuario *usuario_logado) {
     int id_emprestimo = -1;
 
     printf("\n");
-    printf(" ╔═══════════════════════════════════════════════╗\n");
-    printf(" ║         DEVOLVER LIVRO                        ║\n");
-    printf(" ╚═══════════════════════════════════════════════╝\n");
+    printf(" -------------------------------------------------\n");
+    printf(" -         DEVOLVER LIVRO                        -\n");
+    printf(" -------------------------------------------------\n");
     printf("\n");
 
     // Listar empréstimos ativos do usuário
@@ -132,7 +132,7 @@ void devolver_livro(Sistema *s, Usuario *usuario_logado) {
             if (multa > 0) {
                 printf(" ATRASADO! Multa: R$ %.2f\n", multa);
             }
-            printf(" ────────────────────────────────────\n");
+            printf(" -------------------------------------------------\n");
             encontrou = 1;
         }
     }
@@ -250,7 +250,7 @@ void listar_emprestimos_usuario(Sistema *s, int id_usuario) {
                     printf(" Multa: R$ %.2f\n", s->emprestimos[i].multa);
                 }
             }
-            printf(" ────────────────────────────────────\n");
+            printf(" -------------------------------------------------\n");
             encontrou = 1;
         }
     }
@@ -265,9 +265,9 @@ void menu_emprestimos(Sistema *s, Usuario *usuario_logado) {
 
     do {
         printf("\n");
-        printf(" ╔═══════════════════════════════════════════════╗\n");
-        printf(" ║         GESTAO DE EMPRESTIMOS                 ║\n");
-        printf(" ╚═══════════════════════════════════════════════╝\n");
+        printf(" -------------------------------------------------\n");
+        printf(" -         GESTAO DE EMPRESTIMOS                 -\n");
+        printf(" -------------------------------------------------\n");
         printf("\n");
         printf(" 1. Realizar emprestimo\n");
         printf(" 2. Devolver livro\n");

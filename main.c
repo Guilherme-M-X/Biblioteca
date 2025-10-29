@@ -58,30 +58,30 @@ void menu_principal(Sistema *s, Usuario *usuario_logado) {
     do {
         limpar_tela();
         printf("\n");
-        printf("╔══════════════════════════════════════════════════════════╗\n");
-        printf("║       SISTEMA DE GESTAO DE BIBLIOTECA EM C               ║\n");
-        printf("╚══════════════════════════════════════════════════════════╝\n");
+        printf("-----------------------------------------------------\n");
+        printf("-        SISTEMA DE GESTAO DE BIBLIOTECA EM C               -\n");
+        printf("-----------------------------------------------------\n");
         printf("\n Usuario: %s (%s)\n", usuario_logado->nome, 
                tipo_usuario_string(usuario_logado->tipo));
         printf("\n");
-        printf(" ┌──────────────────────────────────────────────────────┐\n");
-        printf(" │                    MENU PRINCIPAL                    │\n");
-        printf(" ├──────────────────────────────────────────────────────┤\n");
-        printf(" │  1. Gestao de Livros                                 │\n");
-        printf(" │  2. Gestao de Emprestimos                            │\n");
+        printf(" --------------------------------------------------------\n");
+        printf(" -                    MENU PRINCIPAL                    -\n");
+        printf(" --------------------------------------------------------\n");
+        printf(" -  1. Gestao de Livros                                 -\n");
+        printf(" -  2. Gestao de Emprestimos                            -\n");
 
         if (usuario_logado->tipo == BIBLIOTECARIO || 
             usuario_logado->tipo == ADMINISTRADOR) {
-            printf(" │  3. Gestao de Usuarios                               │\n");
+            printf(" -  3. Gestao de Usuarios                            -\n");
         }
 
         if (usuario_logado->tipo == ADMINISTRADOR) {
-            printf(" │  4. Relatorios e Estatisticas                        │\n");
+            printf(" -  4. Relatorios e Estatisticas                     -\n");
         }
 
-        printf(" │  9. Salvar dados manualmente                         │\n");
-        printf(" │  0. Sair                                               │\n");
-        printf(" └──────────────────────────────────────────────────────┘\n");
+        printf(" -  9. Salvar dados manualmente                          -\n");
+        printf(" -  0. Sair                                              -\n");
+        printf(" --------------------------------------------------------\n");
         printf("\n Opcao: ");
         scanf("%d", &opcao);
 
@@ -129,17 +129,17 @@ int main() {
     Usuario *usuario_logado = NULL;
 
     printf("\n");
-    printf("════════════════════════════════════════════════════════════\n");
-    printf("    SISTEMA DE GESTAO DE BIBLIOTECA EM LINGUAGEM C          \n");
-    printf("════════════════════════════════════════════════════════════\n");
+    printf("--------------------------------------------------------\n");
+    printf("    SISTEMA DE GESTAO DE BIBLIOTECA EM LINGUAGEM C      \n");
+    printf("--------------------------------------------------------\n");
     printf("\n");
 
     inicializar_sistema(&sistema);
 
     printf("\n\n");
-    printf("╔══════════════════════════════════════════════════════════╗\n");
-    printf("║                    AUTENTICACAO                          ║\n");
-    printf("╚══════════════════════════════════════════════════════════╝\n");
+    printf("--------------------------------------------------------\n");
+    printf("                    AUTENTICACAO                  \n");
+    printf("--------------------------------------------------------\n");
     printf("\n Login: ");
     scanf("%s", login);
     printf(" Senha: ");
